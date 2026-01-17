@@ -1,5 +1,5 @@
 Feature: Logni
-    @focus
+
     Scenario: Login do usuário com credenciais válidas e exclusão da conta
         Given que o usuário acessou a aplicação Automation Exercise
         And a página inicial está visível corretamente
