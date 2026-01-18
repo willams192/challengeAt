@@ -1,4 +1,4 @@
-class LoginElments {
+class LoginElements {
     buttonLogin = () => {
         return 'a[href="/login"]'
     }
@@ -23,4 +23,4 @@ class LoginElments {
 
 }
 
-export default LoginElments
+export default LoginElements

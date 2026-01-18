@@ -1,8 +1,8 @@
 
-import LoginElments from "../elements/login_elements";
+import LoginElements from "../elements/login_elements";
 
 
-const loginElements = new LoginElments()
+const loginElements = new LoginElements()
 
 class LoginPage {
     clickButtonDeleteAccount() {
@@ -34,12 +34,12 @@ class LoginPage {
             .should('be.visible')
     }
     validadeErrorMessage(message) {
-        cy.get(loginElements.formsLogin)
+        cy.get(loginElements.formsLogin())
             .contains('p', message)
             .should('be.visible')
     }
     validadeAccountDelete(message) {
-        cy.get(loginElements.messageDeleteAccount)
+        cy.get(loginElements.messageDeleteAccount())
             .should('be.visible')
             .and('contain.text', message)
     }

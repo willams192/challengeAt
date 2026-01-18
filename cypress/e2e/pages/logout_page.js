@@ -1,11 +1,11 @@
 import LogoutElements from "../elements/logout_elements";
 
-const logoutElememnts = new LogoutElements()
+const logoutElements = new LogoutElements()
 
 
 class LogoutPage {
     clickButtonLogout() {
-        cy.get(logoutElememnts.buttonLogout())
+        cy.get(logoutElements.buttonLogout())
             .should('be.visible')
             .click()
     }
