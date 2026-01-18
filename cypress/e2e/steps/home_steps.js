@@ -1,19 +1,15 @@
 
-import LoginPage from "../pages/login_page";
 import HomePage from "../pages/home_page";
 import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
 
-
-const loginPage = new LoginPage()
 const homePage = new HomePage()
 
-
 Given(/^que o usuário acessou a aplicação Automation Exercise$/, () => {
-    loginPage.accessHome()
+    cy.accessHomeCommands()
 });
 
-Then(/^a página inicial está visível corretamente no "([^"]*)"$/, (args1) => {
-    loginPage.validateActiveMenu(args1)
+And(/^a página inicial está visível corretamente no "([^"]*)"$/, (menu) => {
+    cy.validateActiveMenuCommands(menu)
 });
 
 Then(/^rola para baixo até o rodapé$/, () => {

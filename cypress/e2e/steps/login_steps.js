@@ -6,16 +6,16 @@ import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
 const loginPage = new LoginPage()
 
 Given(/^que o usuário acessou a aplicação Automation Exercise$/, () => {
-    loginPage.accessHome()
+    cy.accessHomeCommands()
 });
 
 And(/^a página inicial está visível corretamente no "([^"]*)"$/, (args1) => {
-    loginPage.validateActiveMenu(args1)
+    cy.validateActiveMenuCommands(menu)
 });
 
 
 When(/^o usuário verificar a opção "([^"]*)"$/, (args1) => {
-    loginPage.clickButtonLogin()
+    cy.clickLoginButtonCommands()
     loginPage.validateLoginPageIsVisible(args1)
 });
 

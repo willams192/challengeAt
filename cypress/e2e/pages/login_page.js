@@ -5,16 +5,6 @@ import LoginElments from "../elements/login_elements";
 const loginElements = new LoginElments()
 
 class LoginPage {
-    accessHome() {
-        cy.accessHomeCommands()
-    }
-
-    validateActiveMenu(menu) {
-        cy.validateActiveMenuCommands(menu)
-    }
-    clickButtonLogin() {
-        cy.clickLoginButtonCommands()
-    }
     clickButtonDeleteAccount() {
         cy.get(loginElements.buttonDeleteAccount())
             .should('be.visible')
