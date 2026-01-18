@@ -20,7 +20,7 @@ Feature: Register User
         When selecionar a opção de criar a conta bancária
         Then aplicação deve exibir uma mensagem de sucesso ao cliente
         And a aplicação deve exibir a mensagem conectado como nome de usuário "teste1"
-    @focus
+
     Scenario: Realizar cadastro com e-mail existente
         Given que o usuário acessou a aplicação Automation Exercise
         And a página inicial está visível corretamente no "Home"
