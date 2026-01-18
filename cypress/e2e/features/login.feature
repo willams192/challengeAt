@@ -9,7 +9,7 @@ Feature: Login
         Then a aplicação deve exibir a mensagem Conectado como nome de usuário "teste"
         When o usuário solicita a exclusão da conta
         Then a aplicação deve exibir a mensagem "ACCOUNT DELETED"
-    @focus
+
     Scenario: Login do usuário com credenciais inválidas
         Given que o usuário acessou a aplicação Automation Exercise
         And a página inicial está visível corretamente no "Home"
