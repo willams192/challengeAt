@@ -2,7 +2,7 @@
 import LoginElments from "../elements/login_elements";
 
 
-const loginElements = new LoginElments
+const loginElements = new LoginElments()
 
 class LoginPage {
     accessHome() {

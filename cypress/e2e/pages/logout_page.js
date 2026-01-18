@@ -1,6 +1,6 @@
 import LogoutElements from "../elements/logout_elements";
 
-const logoutElememnts = new LogoutElements
+const logoutElememnts = new LogoutElements()
 
 
 class LogoutPage {
