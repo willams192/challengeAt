@@ -1,25 +1,19 @@
 
 import LoginElments from "../elements/login_elements";
 
+
 const loginElements = new LoginElments
-const frontBaseUrl = Cypress.env("FRONT_BASE_URL")
 
 class LoginPage {
     accessHome() {
-        cy.visit(frontBaseUrl)
-        cy.url()
-            .should('include', frontBaseUrl)
+        cy.accessHomeCommands()
     }
 
-    validateActiveMenu() {
-        cy.contains('a', 'Home')
-            .should('be.visible')
-            .and('have.css', 'color', 'rgb(255, 165, 0)')
+    validateActiveMenu(menu) {
+        cy.validateActiveMenuCommands(menu)
     }
     clickButtonLogin() {
-        cy.get(loginElements.buttonLogin())
-            .should('be.visible')
-            .click()
+        cy.clickLoginButtonCommands()
     }
     clickButtonDeleteAccount() {
         cy.get(loginElements.buttonDeleteAccount())

@@ -9,8 +9,8 @@ Given(/^que o usuário acessou a aplicação Automation Exercise$/, () => {
     loginPage.accessHome()
 });
 
-And(/^a página inicial está visível corretamente$/, () => {
-    loginPage.validateActiveMenu()
+And(/^a página inicial está visível corretamente no "([^"]*)"$/, (args1) => {
+    loginPage.validateActiveMenu(args1)
 });
 
 
