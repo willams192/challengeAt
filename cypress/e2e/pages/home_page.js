@@ -8,8 +8,9 @@ class HomePage {
     }
     checkSubscription() {
         cy.get(homeElements.footerSubscription())
-            .contains('h2', 'Subscription')
             .should('be.visible')
+            .and('contain.text', 'Subscription')
+
     }
     emailInput(email) {
         cy.get(homeElements.inputEmail())
