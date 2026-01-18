@@ -20,3 +20,9 @@ Cypress.Commands.add('clickLoginButtonCommands', () => {
         .should('be.visible')
         .click()
 })
+
+Cypress.Commands.add('scrollToFooter', () => {
+    cy.get('footer')
+        .should('exist')
+        .scrollIntoView()
+})
