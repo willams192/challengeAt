@@ -55,3 +55,21 @@ Then(/^a aplicação deve exibir a mensagem "([^"]*)"$/, (textError) => {
 });
 
 
+Given('que existe um usuário cadastrado', () => {
+    cy.createUser({
+        username: 'teste1',
+        password: '1234',
+        firstName: 'teste2',
+        lastName: 'Testador',
+        company: 'Testador S.A.',
+        phone: '123'
+    })
+})
+
+When('o usuário realiza login', () => {
+    cy.get('@createdEmail').then((email) => {
+        loginPage.emailInput(email)
+    })
+    loginPage.passwordInput(1234)
+    loginPage.confirmLogin()
+})

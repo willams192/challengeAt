@@ -19,7 +19,11 @@ class RegisterPage {
             .clear()
             .type(email)
     }
-
+    emailInput(email) {
+        cy.get(registerElements.inputEmail())
+            .clear()
+            .type(email)
+    }
     nameInput(name) {
         cy.get(registerElements.inputName())
             .type(name)

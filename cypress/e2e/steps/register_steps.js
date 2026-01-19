@@ -97,3 +97,8 @@ Then(/^a aplicação deve exibir a mensagem conectado como nome de usuário "([^
 Then(/^aplicação deve retornar erro$/, () => {
     registerPage.checkEmailAlreadyExistsMessage()
 });
+
+
+When(/^inserir o email "([^"]*)"$/, (email) => {
+    registerPage.emailInput(email)
+});
