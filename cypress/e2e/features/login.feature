@@ -6,7 +6,7 @@ Feature: Login
         When o usuário realiza login com e-mail "teste@teste8.com"
         And informa a senha "1234"
         And seleciona opção para realizar o login
-        Then a aplicação deve exibir a mensagem Conectado como nome de usuário "teste"
+        Then a aplicação deve exibir a mensagem Conectado como nome de usuário "teste1"
         When o usuário solicita a exclusão da conta
         Then a aplicação deve exibir a mensagem "Account Deleted!"
 
