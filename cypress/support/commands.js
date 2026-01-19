@@ -5,9 +5,14 @@ const frontBaseUrl = Cypress.env("FRONT_BASE_URL")
 
 
 Cypress.Commands.add('accessHomeCommands', () => {
+    const frontBaseUrl = Cypress.env('FRONT_BASE_URL')
+
+    expect(frontBaseUrl, 'FRONT_BASE_URL definida').to.not.be.undefined
+
     cy.visit(frontBaseUrl)
     cy.url().should('include', frontBaseUrl)
 })
+
 
 Cypress.Commands.add('validateActiveMenuCommands', (menuName) => {
     cy.contains('a', menuName)
