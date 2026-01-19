@@ -13,6 +13,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         env:
-          FRONT_BASE_URL: https://automationexercise.com
+          CYPRESS_FRONT_BASE_URL: https://automationexercise.com
         with:
           browser: chrome
