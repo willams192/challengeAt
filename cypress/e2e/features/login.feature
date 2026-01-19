@@ -5,7 +5,7 @@ Feature: Login
         And a página inicial está visível corretamente no "Home"
         And o usuário verificar a opção "Login to your account"
 
-    @focus
+
     Scenario: Login do usuário com credenciais válidas e exclusão da conta
         Given que existe um usuário cadastrado
         When o usuário realiza login
