@@ -9,7 +9,7 @@ Given(/^que o usuário acessou a aplicação Automation Exercise$/, () => {
     cy.accessHomeCommands()
 });
 
-And(/^a página inicial está visível corretamente no "([^"]*)"$/, (args1) => {
+And(/^a página inicial está visível corretamente no "([^"]*)"$/, (menu) => {
     cy.validateActiveMenuCommands(menu)
 });
 

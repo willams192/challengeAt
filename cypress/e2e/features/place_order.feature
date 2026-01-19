@@ -1,6 +1,6 @@
-Feature: Register User
+Feature: Place Order
 
-    Scenario: Realizar o cadastro do usuário
+    Scenario: Realizar compra
         Given que o usuário acessou a aplicação Automation Exercise
         And a página inicial está visível corretamente no "Home"
         And clicar para opção de registro
@@ -20,15 +20,12 @@ Feature: Register User
         When selecionar a opção de criar a conta bancária
         Then aplicação deve exibir uma mensagem de sucesso ao cliente
         And a aplicação deve exibir a mensagem conectado como nome de usuário "teste1"
-
-    Scenario: Realizar cadastro com e-mail existente
-        Given que o usuário acessou a aplicação Automation Exercise
-        And a página inicial está visível corretamente no "Home"
-        And clicar para opção de registro
-        And inserir o nome "teste1"
-        And inserir o email "teste@gmail.com2"
-        When seleciona opção de registrar
-        Then aplicação deve retornar erro
-
-
-
+        And adiciona produto no carrinho
+        And seleciona opção de visualizar no carrinho "Cart"
+        And clica em finalizar a compra
+        And insere uma descrição "Teste123"
+        And insere o dados do cartão
+        And confirma o pedido
+        Then aplicação deve exibir uma transação de sucesso
+        When o usuário solicita a exclusão da conta
+        Then a aplicação deve exibir a mensagem "Account Deleted!"

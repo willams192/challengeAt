@@ -14,10 +14,12 @@ class RegisterPage {
             .should('be.visible')
             .and('contain.text', 'New User Signup!')
     }
-    emailInput(email) {
+    fillEmail(email) {
         cy.get(registerElements.inputEmail())
+            .clear()
             .type(email)
     }
+
     nameInput(name) {
         cy.get(registerElements.inputName())
             .type(name)

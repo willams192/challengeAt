@@ -26,3 +26,10 @@ Cypress.Commands.add('scrollToFooter', () => {
         .should('exist')
         .scrollIntoView()
 })
+
+Cypress.Commands.add('createDynamicEmail', () => {
+    const email = `teste_${Date.now()}@test.com`
+    cy.wrap(email).as('dynamicEmail')
+})
+
+

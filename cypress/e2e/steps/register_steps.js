@@ -21,9 +21,14 @@ When(/^clicar para opção de registro$/, () => {
 });
 
 
-When(/^inserir o email "([^"]*)"$/, (email) => {
-    registerPage.emailInput(email)
-});
+And('inserir o email', () => {
+    cy.createDynamicEmail()
+
+    cy.get('@dynamicEmail').then((email) => {
+        registerPage.fillEmail(email)
+    })
+})
+
 
 When(/^inserir o nome "([^"]*)"$/, (name) => {
     registerPage.nameInput(name)

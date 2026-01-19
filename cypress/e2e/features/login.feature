@@ -8,7 +8,7 @@ Feature: Login
         And seleciona opção para realizar o login
         Then a aplicação deve exibir a mensagem Conectado como nome de usuário "teste"
         When o usuário solicita a exclusão da conta
-        Then a aplicação deve exibir a mensagem "ACCOUNT DELETED"
+        Then a aplicação deve exibir a mensagem "Account Deleted!"
 
     Scenario: Login do usuário com credenciais inválidas
         Given que o usuário acessou a aplicação Automation Exercise
