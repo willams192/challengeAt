@@ -1,8 +1,10 @@
 Feature: Register User
-
-    Scenario: Realizar o cadastro do usuário
+    Background:
         Given que o usuário acessou a aplicação Automation Exercise
         And a página inicial está visível corretamente no "Home"
+        And o usuário verificar a opção "Login to your account"
+
+    Scenario: Realizar o cadastro do usuário
         And clicar para opção de registro
         And inserir o nome "teste1"
         And inserir o email
@@ -22,8 +24,6 @@ Feature: Register User
         And a aplicação deve exibir a mensagem conectado como nome de usuário "teste1"
 
     Scenario: Realizar cadastro com e-mail existente
-        Given que o usuário acessou a aplicação Automation Exercise
-        And a página inicial está visível corretamente no "Home"
         And clicar para opção de registro
         And inserir o nome "teste1"
         And inserir o email "teste@gmail.com2"
