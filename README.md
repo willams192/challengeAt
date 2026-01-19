@@ -28,7 +28,6 @@ cypress/
   support/
     commands.js             # Comandos customizados do Cypress
     e2e.js                  # Configuração global dos testes
-  cucumber-html-report.js   # Arquivo de configuração do dashboard de resultados dos testes.
 cypress.env.json            # Variáveis de ambiente (dados sensíveis, NÃO versionar)
 cypress.config.js           # Configuração do Cypress
 ```
@@ -79,9 +78,6 @@ O projeto utiliza o [multiple-cucumber-html-reporter](https://github.com/wswebcr
 1. **Execução dos testes:**  
    Os testes são executados e os resultados são salvos em arquivos `.cucumber` dentro de `cypress/cucumber-json/`.
 
-2. **Geração do relatório:**  
-   Após a execução dos testes, o relatório HTML é gerado automaticamente na pasta `cypress/reports/multiple-cucumber-html-reporter/`.
-
 ---
 
 ## ▶️ Como Executar os Testes
@@ -112,33 +108,6 @@ O projeto utiliza o [multiple-cucumber-html-reporter](https://github.com/wswebcr
    npm run run-tests
    ```
 
----
-
-## Como Executar os Testes e Gerar o Relatório
-
-
-1. **Gerar apenas o relatório (após os testes)**
-   ```bash
-   npm run generate-multiple-cucumber-html-report
-   ```
-
-2. **Executar testes e gerar o relatório automaticamente**
-   ```bash
-   npm run test-with-report
-   ```
-
-> **Obs.:** O relatório será gerado mesmo que algum teste falhe.
-
----
-
-## Visualizando o Relatório
-
-Abra o arquivo:
-   ```
-   cypress/reports/multiple-cucumber-html-reporter/index.html
-   ```
-
-no seu navegador para visualizar o relatório detalhado dos testes.
 
 ---
 
