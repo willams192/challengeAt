@@ -99,6 +99,6 @@ Then(/^aplicação deve retornar erro$/, () => {
 });
 
 
-When(/^inserir o email "([^"]*)"$/, (args1) => {
+When(/^inserir o email "([^"]*)"$/, (email) => {
     registerPage.emailInput(email)
 });
